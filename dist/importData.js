@@ -36,22 +36,18 @@ async function importData() {
                 imageRef = await uploadImageToSanity(product.image);
             }
             const sanityProduct = {
-                _id: `product-${product.id}`, // Prefix the ID to ensure validity
-                _type: 'product',
+                _id: `service-${product.id}`, // Prefix the ID to ensure validity
+                _type: 'service',
                 name: product.title,
                 price: product.price,
-                discountPercentage: product.discountPercentage || 0,
-                tags: product.category ? [product.category] : [],
-                image: {
+                pic: {
                     _type: 'image',
                     asset: {
                         _type: 'reference',
                         _ref: imageRef, // Set the correct asset reference ID
                     },
                 },
-                description: product.description,
-                rating: product.rating?.rate || 0,
-                ratingCount: product.rating?.count || 0,
+                variation: product.description,
             };
             // Log the product before attempting to upload it to Sanity
             console.log('Uploading product:', sanityProduct);
