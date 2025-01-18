@@ -1,6 +1,20 @@
-# How to run it
-**Prerequisites to install it**
+# How to Run It
 
-1. Install typescript using `npm install typescript --save-dev`
+## Prerequisites
 
-2. Then, to build the ts file use `npx tsc` and to run them use, `node dist/importData.js` 
+1. Install TypeScript:
+   ```sh
+   npm install typescript --save-dev
+   ```
+
+## Building and Running
+
+2. To build the TypeScript files:
+   ```sh
+   npx tsc
+   ```
+
+3. To run the built files:
+   ```sh
+   node dist/importData.js
+   ```
